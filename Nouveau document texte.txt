@@ -1,6 +1,37 @@
-https://www.tip-store.com/products/neck-pillow-for-car-seat
-https://www.tip-store.com/products/sports-water-bottle
-https://www.tip-store.com/products/household-popcorn-making-machine
-https://www.tip-store.com/products/aroma-lamp
-https://www.tip-store.com/products/mini-gas-camping-stove
-https://www.tip-store.com/products/small-machine-for-clothes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Clicks</title>
+</head>
+<body>
+    <a href="https://example.com" id="tracked-link" target="_blank">Clique ici</a>
+
+    <script>
+        // Remplace "TON_BOT_TOKEN" et "TON_CHAT_ID" avec tes informations
+        const botToken = "7650312762:AAEcFbmxjXBMI8siVUGdMWXFQnmtz8ISRUY";
+        const chatId = "7650312762";
+
+        document.getElementById("tracked-link").addEventListener("click", function(event) {
+            const link = event.target.href;
+
+            // Prépare la requête à Telegram
+            const telegramApiUrl = `https://api.telegram.org/bot${7650312762:AAEcFbmxjXBMI8siVUGdMWXFQnmtz8ISRUY}/sendMessage`;
+            const message = `Le lien a été cliqué : ${https://www.tip-store.com/}`;
+
+            // Envoie la requête
+            fetch(telegramApiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            }).catch(err => console.error("Erreur : ", err));
+        });
+    </script>
+</body>
+</html>
